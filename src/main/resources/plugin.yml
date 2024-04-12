@@ -1,0 +1,4 @@
+name: NoElytra
+version: '${project.version}'
+main: p.noelytra.NoElytra
+api-version: '1.16'
