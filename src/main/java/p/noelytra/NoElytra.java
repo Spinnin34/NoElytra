@@ -7,6 +7,8 @@ public final class NoElytra extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
+
         getLogger().info("El plugin a sido inciado correctamente.");
         getServer().getPluginManager().registerEvents(new EventChecker(), this);
 

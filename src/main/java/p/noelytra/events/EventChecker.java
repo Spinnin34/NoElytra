@@ -9,7 +9,6 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import p.noelytra.Handler.ElytraHandler;
 
 public class EventChecker implements Listener {
-    // Check if player exited the end
     @EventHandler
     public void onPlayerChangeWorld(PlayerChangedWorldEvent event) {
         if (event.getFrom().getName().equals("world_the_end")) {
@@ -18,8 +17,6 @@ public class EventChecker implements Listener {
             ElytraHandler.OpenElytra(event.getPlayer());
         }
     }
-
-    // Check if player moves item
     @EventHandler
     public void onInventory(InventoryClickEvent event) {
         if (!event.getWhoClicked().getWorld().getName().equals("world_the_end")) {
@@ -28,8 +25,6 @@ public class EventChecker implements Listener {
             ElytraHandler.OpenElytra((Player) event.getWhoClicked());
         }
     }
-
-    // Check if player interacts with item
     @EventHandler
     public void onInteraction(PlayerInteractEvent event) {
         if (!event.getPlayer().getWorld().getName().equals("world_the_end")) {
